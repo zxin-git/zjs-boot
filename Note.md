@@ -1,0 +1,2 @@
+- jar:org.springframwork.boot:spring-boot:2.1.17.RELEASE
+- package:logging
