@@ -7,17 +7,17 @@
 
     <appender name="ES" class="com.internetitem.logback.elasticsearch.ElasticsearchAppender">
         <url>http://localhost:9200/_bulk</url>
-        <index>logstash-k8s-juno</index>
+        <index>logstash-k8s-juno-%date{yyyy.MM.dd}</index>
         <type>_doc</type>
         <errorsToStderr>true</errorsToStderr>
         <authentication class="com.internetitem.logback.elasticsearch.config.BasicAuthentication" /> <!-- optional -->
         <properties>
-            <property><name>host</name><value>${HOSTNAME}</value></property>
+            <property><name>app</name><value>juno</value></property>
             <property><name>host</name><value>${HOSTNAME}</value><allowEmpty>false</allowEmpty></property>
-            <property><name>severity</name><value>%level</value></property>
             <property><name>thread</name><value>%thread</value></property>
-            <property><name>stacktrace</name><value>%ex</value></property>
             <property><name>logger</name><value>%logger</value></property>
+            <property><name>level</name><value>%level</value></property>
+            <property><name>stack_trace</name><value>%ex</value></property>
         </properties>
         <headers>
             <header><name>Content-Type</name><value>application/json</value></header>

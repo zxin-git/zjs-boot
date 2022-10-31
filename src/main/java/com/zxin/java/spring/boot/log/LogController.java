@@ -15,6 +15,7 @@ public class LogController {
     @GetMapping("/log/{record}")
     public String a(@PathVariable String record){
         log.info(record);
+        log.warn("ex", new RuntimeException("ss"));
         return record;
     }
 
