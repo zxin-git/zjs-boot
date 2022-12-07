@@ -1,2 +1,6 @@
-
+hermes:
+  channel:
+    provider:
+      cucc:
+        callbackUrl: ${hermes.channel.provider.base.domain}/webAp
 
