@@ -21,4 +21,9 @@ public class StaffService {
         System.out.println(person);
     }
     
+    
+    public void validateBean(@Valid ScriptAssertBean bean){
+        System.out.println(bean);
+    }
+    
 }
