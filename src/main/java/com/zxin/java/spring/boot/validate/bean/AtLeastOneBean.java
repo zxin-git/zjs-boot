@@ -1,6 +1,7 @@
 package com.zxin.java.spring.boot.validate.bean;
 
 import com.zxin.java.spring.boot.validate.constraint.AtLeastOne;
+import com.zxin.java.spring.boot.validate.constraint.CaseSensitive;
 import lombok.Data;
 
 /**
@@ -13,5 +14,8 @@ public class AtLeastOneBean {
     private String id;
     
     private String outId;
+    
+    @CaseSensitive(caseType = CaseSensitive.CaseEnum.LOWER)
+    private String name;
     
 }

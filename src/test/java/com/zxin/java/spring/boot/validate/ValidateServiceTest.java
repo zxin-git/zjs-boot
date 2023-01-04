@@ -21,6 +21,7 @@ public class ValidateServiceTest extends AbstractBootApplicationTest {
     public void validateBean() {
         AtLeastOneBean atLeastOneBean = new AtLeastOneBean();
         atLeastOneBean.setId("1");
+        atLeastOneBean.setName("AAA");
         ApplicationContextHolder.get().getBean(ValidateService.class).validateBean(atLeastOneBean);
     }
 }

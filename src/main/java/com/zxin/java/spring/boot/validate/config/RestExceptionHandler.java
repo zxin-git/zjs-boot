@@ -1,4 +1,4 @@
-package com.zxin.java.spring.boot.validate;
+package com.zxin.java.spring.boot.validate.config;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
