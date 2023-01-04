@@ -2,6 +2,7 @@ package com.zxin.java.spring.boot.validate;
 
 import cn.hutool.core.date.DateUtil;
 import com.zxin.java.spring.boot.AbstractBootApplicationTest;
+import com.zxin.java.spring.boot.validate.bean.ScriptAssertBean;
 import org.junit.Test;
 
 import javax.script.ScriptEngineFactory;
@@ -18,7 +19,7 @@ public class ScriptAssertBeanTest extends AbstractBootApplicationTest {
         bean.setEndDate(DateUtil.parseDate("2030-01-01"));
     
     
-        ApplicationContextHolder.get().getBean(StaffService.class).validateBean(bean);
+        ApplicationContextHolder.get().getBean(ValidateService.class).validateBean(bean);
     }
     
     

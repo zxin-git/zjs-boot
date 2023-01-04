@@ -1,10 +1,9 @@
 package com.zxin.java.spring.boot.validate;
 
+import com.zxin.java.spring.boot.validate.bean.Person;
 import org.junit.Test;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.DataBinder;
-
-import static org.junit.Assert.*;
 
 public class PersonValidatorTest {
     

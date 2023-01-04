@@ -1,5 +1,6 @@
 package com.zxin.java.spring.boot.validate;
 
+import com.zxin.java.spring.boot.validate.bean.User;
 import org.junit.Test;
 
 import javax.validation.ConstraintViolation;
@@ -9,8 +10,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
-
-import static org.junit.Assert.*;
 
 public class UserTest {
     

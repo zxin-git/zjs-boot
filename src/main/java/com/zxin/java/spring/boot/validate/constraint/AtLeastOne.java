@@ -11,6 +11,7 @@ import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
 import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.ElementType.METHOD;
 import static java.lang.annotation.ElementType.PARAMETER;
+import static java.lang.annotation.ElementType.TYPE;
 import static java.lang.annotation.ElementType.TYPE_USE;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
@@ -18,23 +19,23 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  * 至少存在一个
  * @author zxin
  */
-@Target({FIELD, METHOD, PARAMETER, ANNOTATION_TYPE, TYPE_USE})
+@Target({ TYPE })
 @Retention(RUNTIME)
 @Constraint(validatedBy = AtLeastOneValidator.class)
 @Documented
 @Repeatable(AtLeastOne.List.class)
 public @interface AtLeastOne {
     
-    String message() default "{javax.validation.constraints.NotNull.message}";
+    String message() default "{javax.validation.constraints.AtLeastOne.message}";
 
     Class<?>[] groups() default {};
 
     Class<? extends Payload>[] payload() default {};
     
-    String value() default "id";
+    String[] value();
     
     
-    @Target({FIELD, METHOD, PARAMETER, ANNOTATION_TYPE})
+    @Target({ TYPE })
     @Retention(RUNTIME)
     @Documented
     @interface List {

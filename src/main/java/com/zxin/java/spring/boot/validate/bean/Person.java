@@ -1,4 +1,4 @@
-package com.zxin.java.spring.boot.validate;
+package com.zxin.java.spring.boot.validate.bean;
 
 import com.zxin.java.spring.boot.validate.constraint.CaseSensitive;
 import lombok.Data;

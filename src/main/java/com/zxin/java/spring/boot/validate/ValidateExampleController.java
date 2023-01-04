@@ -1,5 +1,6 @@
 package com.zxin.java.spring.boot.validate;
 
+import com.zxin.java.spring.boot.validate.bean.Staff;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,7 +18,7 @@ import javax.validation.Valid;
 public class ValidateExampleController {
     
     @Autowired
-    private StaffService service;
+    private ValidateService service;
 
     @PostMapping("/controller")
     public String controller(@RequestBody @Valid Staff staff){

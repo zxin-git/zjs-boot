@@ -1,5 +1,6 @@
 package com.zxin.java.spring.boot.validate;
 
+import com.zxin.java.spring.boot.validate.bean.Person;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
